@@ -21,7 +21,7 @@ export const initialState = {
       case "ADD_ITEM":
           return {
               ...state,
-                
+                additionalPrice: state.additionalPrice + action.payload.price,
                 car: {
                     ...state.car,
                     features: [...state.car.features, action.payload]
