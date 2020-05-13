@@ -27,7 +27,7 @@ export const initialState = {
                     features: [...state.car.features, action.payload]
                   },
                   additionalFeatures: state.additionalFeatures.filter(
-                    item => item.id !== action.payload.id
+                    item => item !== action.payload
                   )
                 };
             
@@ -40,7 +40,7 @@ export const initialState = {
                   car: {
                     ...state.car,
                     features: state.car.features.filter(
-                      item => item.id !== action.payload.id
+                      item => item !== action.payload
                     )
                   },
                   additionalFeatures: [...state.additionalFeatures, action.payload]
